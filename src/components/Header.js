@@ -47,41 +47,58 @@ const useStyles = makeStyles((theme) => ({
   },
   heading: {
     color: "white",
+    fontSize: "56px",
+    fontFamily: "Montserrat, sans-serif",
+    fontWeight: "500",
     "@media(max-width: 600px)": {
-      fontSize: "36px",
-      margin: theme.spacing(1, 3),
+      fontSize: "32px",
+      margin: theme.spacing(1, 2),
       marginTop: theme.spacing(6),
     },
   },
   subtitle: {
     color: "white",
     fontWeight: "100",
-    fontSize: "10px",
+    fontSize: "24px",
+    fontFamily: "Montserrat, sans-serif",
+    marginTop: theme.spacing(1),
     "@media(max-width: 600px)": {
       fontSize: "18px",
-      margin: theme.spacing(1, 3),
+      margin: theme.spacing(2, 3),
     },
   },
   btnFilled: {
+    fontFamily: "Montserrat, sans-serif",
     borderRadius: "16px",
     border: "none",
     background: "white",
-    padding: theme.spacing(1.1, 1.5),
+    padding: theme.spacing(1.1, 2),
     color: "#FF4658",
-    fontSize: "12px",
+    fontSize: "24px",
+    fontWeight: "500",
+    transition: "0.2s all",
     "@media(max-width: 600px)": {
       fontSize: "20px",
     },
+    "&:hover": {
+      opacity: "0.7",
+    },
   },
   btnEmpty: {
+    fontFamily: "Montserrat, sans-serif",
     borderRadius: "16px",
     border: "1px solid white",
     background: "transparent",
-    padding: theme.spacing(1, 1.5),
+    padding: theme.spacing(1, 2),
     color: "white",
-    fontSize: "12px",
+    fontWeight: "500",
+    fontSize: "24px",
+    transition: "0.2s all",
     "@media(max-width: 600px)": {
       fontSize: "20px",
+    },
+    "&:hover": {
+      opacity: "0.7",
     },
   },
 }));
@@ -99,7 +116,7 @@ const Header = () => {
           variant="h4"
           align="center"
           className={classes.heading}
-          style={{ padding: "120px 4px 4px 4px" }}
+          style={{ padding: "160px 4px 4px 4px" }}
         >
           A modern publishing platform
         </Typography>
