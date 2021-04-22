@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     background:
       "linear-gradient(90deg, rgba(255,133,110,1) 0%, rgba(255,68,87,1) 100%)",
     overflow: "hidden",
-    borderRadius: "0 0 0 80px",
+    borderRadius: "0 0 0 100px",
   },
   svg: {
     zIndex: -1,

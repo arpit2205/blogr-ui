@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 
   subHeading: {
     padding: theme.spacing(1, 10),
-    fontWeight: "26px",
+    fontSize: "26px",
     fontWeight: "400",
     fontFamily: "Montserrat, sans-serif",
     color: "#3C3F60",
