@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("md")]: {
       marginTop: "30vh",
-      height: "80vh",
+      height: "75vh",
     },
   },
   circles: {
