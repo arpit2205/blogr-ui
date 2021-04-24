@@ -10,6 +10,7 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import design from "../images/bg-pattern-intro.svg";
 import logo from "../images/logo.svg";
+import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -101,6 +102,9 @@ const useStyles = makeStyles((theme) => ({
       opacity: "0.7",
     },
   },
+  logo: {
+    padding: theme.spacing(6),
+  },
 }));
 
 const Header = () => {
@@ -110,27 +114,32 @@ const Header = () => {
     <>
       <CssBaseline />
       <Container maxWidth={false} className={classes.container}>
-        <img className={classes.svg} src={design} />
+        <img src={logo} className={classes.logo} />
 
-        <Typography
-          variant="h4"
-          align="center"
-          className={classes.heading}
-          style={{ padding: "160px 4px 4px 4px" }}
-        >
-          A modern publishing platform
-        </Typography>
-        <Typography
-          variant="body2"
-          align="center"
-          className={classes.subtitle}
-          style={{ paddingBottom: "32px" }}
-        >
-          Grow your audience and build your online brand
-        </Typography>
+        <img className={classes.svg} src={design} />
+        <Fade>
+          <Typography
+            variant="h4"
+            align="center"
+            className={classes.heading}
+            style={{ padding: "0 4px 4px 4px" }}
+          >
+            A modern publishing platform
+          </Typography>
+          <Typography
+            variant="body2"
+            align="center"
+            className={classes.subtitle}
+            style={{ paddingBottom: "32px" }}
+          >
+            Grow your audience and build your online brand
+          </Typography>
+        </Fade>
         <Grid container direction="row" justify="center" spacing={2}>
           <Grid item>
-            <button className={classes.btnFilled}>Start for free</button>
+            <Fade bottom>
+              <button className={classes.btnFilled}>Start for free</button>
+            </Fade>
           </Grid>
           <Grid item>
             <button className={classes.btnEmpty}>Learn more</button>

@@ -3,6 +3,7 @@ import { CssBaseline, Container, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 import desktopImage from "../images/illustration-editor-desktop.svg";
+import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -54,38 +55,43 @@ const Editor = () => {
 
         <Grid container justify="center" spacing={2}>
           <Grid item xs={12} md={6}>
-            <img
-              src={desktopImage}
-              width="100%"
-              className={classes.desktopImg}
-            />
+            <Fade>
+              <img
+                src={desktopImage}
+                width="100%"
+                className={classes.desktopImg}
+              />
+            </Fade>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Typography variant="h5" className={classes.subHeading}>
-              Introducing an extensible editor
-            </Typography>
-            <Typography variant="body1" className={classes.captions}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-              voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-              fugiat iusto fuga praesentium optio, eaque rerum! Provident
-              similique accusantium nemo autem.
-            </Typography>
-
-            <Typography
-              variant="h5"
-              className={classes.subHeading}
-              style={{ marginTop: "32px" }}
-            >
-              Robust content management
-            </Typography>
-            <Typography variant="body1" className={classes.captions}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-              voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-              fugiat iusto fuga praesentium optio, eaque rerum! Provident
-              similique accusantium nemo autem.
-            </Typography>
+            <Fade>
+              <Typography variant="h5" className={classes.subHeading}>
+                Introducing an extensible editor
+              </Typography>
+              <Typography variant="body1" className={classes.captions}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                mollitia, molestiae quas vel sint commodi repudiandae
+                consequuntur voluptatum laborum numquam blanditiis harum
+                quisquam eius sed odit fugiat iusto fuga praesentium optio,
+                eaque rerum! Provident similique accusantium nemo autem.
+              </Typography>
+            </Fade>
+            <Fade>
+              <Typography
+                variant="h5"
+                className={classes.subHeading}
+                style={{ marginTop: "32px" }}
+              >
+                Robust content management
+              </Typography>
+              <Typography variant="body1" className={classes.captions}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                mollitia, molestiae quas vel sint commodi repudiandae
+                consequuntur voluptatum laborum numquam blanditiis harum
+                quisquam eius sed odit fugiat iusto fuga praesentium optio,
+                eaque rerum! Provident similique accusantium nemo autem.
+              </Typography>
+            </Fade>
           </Grid>
         </Grid>
       </Container>

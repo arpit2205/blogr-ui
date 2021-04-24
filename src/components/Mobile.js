@@ -3,6 +3,7 @@ import { CssBaseline, Container, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import circles from "../images/bg-pattern-circles.svg";
 import phones from "../images/illustration-phones.svg";
+import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -77,25 +78,30 @@ const Mobile = () => {
     <>
       <CssBaseline />
       <div classname={classes.phonesWrapper}>
-        <img src={phones} className={classes.phones} />
+        <Fade top duration={2000}>
+          <img src={phones} className={classes.phones} />
+        </Fade>
       </div>
       <Container maxWidth={false} className={classes.container}>
-        <img src={circles} className={classes.circles} />
-
+        <Fade>
+          <img src={circles} className={classes.circles} />
+        </Fade>
         <Grid container justify="center" spacing={2}>
           <Grid item xs={12} md={6}>
             {/* <img src={phones} className={classes.phones} /> */}.
           </Grid>
           <Grid item xs={12} md={6}>
-            <Typography variant="h5" className={classes.subHeading}>
-              State of the art infrastructure
-            </Typography>
-            <Typography variant="body1" className={classes.captions}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-              voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-              fugiat iusto fuga praesentium optio
-            </Typography>
+            <Fade bottom>
+              <Typography variant="h5" className={classes.subHeading}>
+                State of the art infrastructure
+              </Typography>
+              <Typography variant="body1" className={classes.captions}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                mollitia, molestiae quas vel sint commodi repudiandae
+                consequuntur voluptatum laborum numquam blanditiis harum
+                quisquam eius sed odit fugiat iusto fuga praesentium optio
+              </Typography>
+            </Fade>
           </Grid>
         </Grid>
       </Container>

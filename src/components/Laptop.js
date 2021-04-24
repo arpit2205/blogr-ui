@@ -2,6 +2,7 @@ import React from "react";
 import { CssBaseline, Container, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import laptop from "../images/illustration-laptop-desktop.svg";
+import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles((theme) => ({
   laptop: {
@@ -53,34 +54,40 @@ const Laptop = () => {
       <Container maxWidht={false} className={classes.container}>
         <Grid container justify="center" spacing={2}>
           <Grid item xs={12} md={6}>
-            <img src={laptop} className={classes.laptop} />
+            <Fade left>
+              <img src={laptop} className={classes.laptop} />
+            </Fade>
           </Grid>
           <Grid item xs={12} md={6} className={classes.textWrapper}>
-            <Typography variant="h5" className={classes.subHeading}>
-              Free, open and simple
-            </Typography>
-            <Typography variant="body1" className={classes.captions}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-              voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-              fugiat iusto fuga praesentium optio, eaque rerum! Provident
-              similique accusantium nemo autem.
-            </Typography>
+            <Fade>
+              <Typography variant="h5" className={classes.subHeading}>
+                Free, open and simple
+              </Typography>
+              <Typography variant="body1" className={classes.captions}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                mollitia, molestiae quas vel sint commodi repudiandae
+                consequuntur voluptatum laborum numquam blanditiis harum
+                quisquam eius sed odit fugiat iusto fuga praesentium optio,
+                eaque rerum! Provident similique accusantium nemo autem.
+              </Typography>
+            </Fade>
 
-            <Typography
-              variant="h5"
-              className={classes.subHeading}
-              style={{ marginTop: "32px" }}
-            >
-              Powerful tooling
-            </Typography>
-            <Typography variant="body1" className={classes.captions}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-              voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-              fugiat iusto fuga praesentium optio, eaque rerum! Provident
-              similique accusantium nemo autem.
-            </Typography>
+            <Fade>
+              <Typography
+                variant="h5"
+                className={classes.subHeading}
+                style={{ marginTop: "32px" }}
+              >
+                Powerful tooling
+              </Typography>
+              <Typography variant="body1" className={classes.captions}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                mollitia, molestiae quas vel sint commodi repudiandae
+                consequuntur voluptatum laborum numquam blanditiis harum
+                quisquam eius sed odit fugiat iusto fuga praesentium optio,
+                eaque rerum! Provident similique accusantium nemo autem.
+              </Typography>
+            </Fade>
           </Grid>
         </Grid>
       </Container>

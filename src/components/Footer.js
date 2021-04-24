@@ -9,11 +9,12 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "0 100px 0 0",
     color: "white",
     padding: theme.spacing(4),
+    marginTop: theme.spacing(8),
   },
   title: {
     fontFamily: "Montserrat, sans-serif",
     fontWeight: "500",
-    padding: theme.spacing(4, 2),
+    padding: theme.spacing(4, 2, 1, 2),
   },
   links: {
     padding: theme.spacing(1, 2),
