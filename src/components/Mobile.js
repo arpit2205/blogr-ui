@@ -78,7 +78,7 @@ const Mobile = () => {
     <>
       <CssBaseline />
       <div classname={classes.phonesWrapper}>
-        <Fade top duration={2000}>
+        <Fade top>
           <img src={phones} className={classes.phones} />
         </Fade>
       </div>
